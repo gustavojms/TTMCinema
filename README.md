@@ -23,4 +23,3 @@ Serviço de organização e gerencimento de obras cinematográficas para usuári
 
 * [Gustavo José](https://github.com/gustavojms)
 * [Flávio César](https://github.com/flaviocesar1)
-* [José Henrique](https://github.com/henribeiro)
