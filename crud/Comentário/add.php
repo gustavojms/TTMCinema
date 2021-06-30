@@ -1,8 +1,7 @@
 <?php 
-    $nome = $_POST['nome'];
+    $usuario = $_POST['usuario'];
     $comentario = $_POST['comentario'];
-    $rate = $_POST['rate'];
-    $data = $comentario . "," . "$rate" . "\n";
+    $data = $usuario . "," . "$comentario" . "\n";
 
     $fp = fopen('source.csv', 'a');
     fwrite($fp, $data);
