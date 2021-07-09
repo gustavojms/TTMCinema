@@ -44,7 +44,7 @@
         <?php foreach($data as $row): ?>
         <td><?= $row[1] ?></td>
         <td><?= $row[2] ?></td>
-        <td><a href="remove-comentario.php?id=<?= $row[0]?>" onclick="return confirm('Are you sure you want to delete this item?')"> Deletar </a></td>
+        <td><a href="remove-comentario.php?id=<?= $row[0]?>" onclick="return confirm('Tem certeza que deseja deletar este item?')"> Deletar </a></td>
     </tr>
     <?php endforeach ?>
 </table>
