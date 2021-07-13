@@ -23,10 +23,10 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="comentarios.php">Comentarios</a></li>
-                <li><a href="sugestoes.php">Sugestoes</a></li>
+                <li><a href="/index.php">Inicio</a></li>
+                <li><a href="/usuario/login.php">Login</a></li>
+                <li><a href="/comentarios/comentarios.php">Comentarios</a></li>
+                <li><a href="/sugestoes/sugestoes.php">Sugestoes</a></li>
             </ul>
         </nav>
     </header>
