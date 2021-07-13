@@ -1,7 +1,7 @@
 <?php
 
     if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['usuario']) && !empty($_POST['usuario']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
-        require 'conexao/conexao.php';
+        require '../conexao/conexao.php';
 
         $nome = addslashes($_POST['nome']);
         $usuario = addslashes($_POST['usuario']);    

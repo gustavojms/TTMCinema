@@ -1,5 +1,5 @@
 <?php 
-    include 'conexao/conexao.php';
+    include '../conexao/conexao.php';
 
     $nome = addslashes($_POST['nome_filme']);
     $lancamento = addslashes($_POST['lancamento']);

@@ -1,5 +1,5 @@
 <?php 
-    include 'conexao/conexao.php';
+    include '../conexao/conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/moon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/moon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,10 +23,10 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="comentarios.php">Comentarios</a></li>
-                <li><a href="sugestoes.php">Sugestoes</a></li>
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../usuario/login.php">Login</a></li>
+                <li><a href="../comentarios/comentarios.php">Comentarios</a></li>
+                <li><a href="../sugestoes/sugestoes.php">Sugestoes</a></li>
             </ul>
         </nav>
     </header>

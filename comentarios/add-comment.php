@@ -1,5 +1,5 @@
 <?php
-    include 'conexao/conexao.php';
+    include '../conexao/conexao.php';
 
     $usuario = addslashes($_POST['usuario']);
     $comentario = addslashes($_POST['comentario']);
