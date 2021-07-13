@@ -8,8 +8,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TTMCinema</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/moon.png" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -22,13 +23,13 @@
             </div>
             <ul class="nav-list">
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="comentarios.php">Comentarios</a></li>
-                <li><a href="sugestoes.php">Sugestoes</a></li>
+                <li><a href="usuario/login.php">Login</a></li>
+                <li><a href="comentarios/comentarios.php">Comentarios</a></li>
+                <li><a href="sugestoes/sugestoes.php">Sugestoes</a></li>
             </ul>
         </nav>
     </header>
     <h1>Olá, <?php echo $_SESSION['userL']?></h1>
 </body>
-<script src="navbar.js"></script>
+<script src="assets/js/navbar.js"></script>
 </html>
