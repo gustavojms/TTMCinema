@@ -4,12 +4,12 @@
         require '../conexao/conexao.php';
         require 'UsuarioClass.php';
 
-        $user = new Usuario();
+        // $user = new Usuario();
 
         $usuario = addslashes($_POST['usuario']);
         $senha = addslashes($_POST['senha']);
 
-        if($user -> login($usuario, $senha) === true) {
+        if(Usuario::login ($usuario, $senha) === true) {
             if(isset($_SESSION['userL'])) {
                 header("Location: /home.php");
             }
