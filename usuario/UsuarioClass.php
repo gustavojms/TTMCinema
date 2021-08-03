@@ -14,7 +14,7 @@ Class Usuario {
             $dado = $sql -> fetch();
             
             $_SESSION['userL'] = $dado['nome'];
-            $_SESSION['userId'] = $dado['cod_user'];
+            $_SESSION['userId'] = $dado['id_usuario'];
             return true;
         } else {
             return false;
