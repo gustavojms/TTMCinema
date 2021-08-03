@@ -46,7 +46,11 @@
                 <td><a href=""><?= $row[1] ?></td></a>
                 <td><?= $row[2] ?></td>
                 <td><?= $row[3] ?></td>
-                <td><a href="remove-obra.php?id=<?= $row[0]?>" onclick="return confirmDelete()"> Excluir </a></td>
+                <td>
+                <?php if ($row['id_usuario'] == $_SESSION['userId']): ?>
+                <a href="remove-obra.php?id=<?= $row[0]?>" onclick="return confirmDelete()"> Excluir </a>
+                <?php endif ?>
+                </td>
         </tr>
         <?php endforeach ?>
     </table>
