@@ -1,6 +1,6 @@
 <?php 
     include 'conexao/conexao.php';
-    include '../usuario/UsuarioClass.php';
+    include 'usuario/UsuarioClass.php';
     if(!Usuario::isLogged()) {
         header("Location: /usuario/login.php");
         exit();
