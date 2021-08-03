@@ -45,9 +45,9 @@
         <input type="text" name="titulo" id="titulo">
     </label>
 
-    <label for="data_lancamento">
-        <span>Data de lancamento</span>
-        <input type="text" name="data_lancamento" id="data_lancamento">
+    <label for="ano_lancamento">
+        <span>Ano de lancamento</span>
+        <input type="text" name="ano_lancamento" id="ano_lancamento">
     </label>
 
     <label for="etaria">
