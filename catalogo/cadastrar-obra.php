@@ -77,6 +77,10 @@
     <input type="submit" value="Cadastrar"></button>
     <a href="catalogo.php">Ver catalogo</a>
 </form>
-</main>  
+</main>
+<section class="images">
+        <div class="circle"></div>
+    </section>
+    <script src="/assets/js/navbar.js"></script>
 </body>
 </html>
