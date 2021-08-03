@@ -38,7 +38,7 @@
     <table>
         <tr>
             <th>Nome</th>
-            <th>Data de lancamento</th>
+            <th>Ano de lancamento</th>
             <th>Classificacao etaria</th>
         </tr>
         <tr class="list">
