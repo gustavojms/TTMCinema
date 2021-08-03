@@ -57,9 +57,9 @@
                 <td><?= $row[2] ?></td>
                 <td><?= $row[3] ?></td>
                 <td>
-                <?php if ($row['id_usuario'] == $_SESSION['userId']): ?>
-                <a href="remove-obra.php?id=<?= $row[0]?>" onclick="return confirmDelete()"> Excluir </a>
-                <?php endif ?>
+            <?php if (Usuario::isLogged() && $row['id_usuario'] == $_SESSION['userId']): ?>
+                    <a href="remove-obra.php?id=<?= $row[0]?>" onclick="return confirmDelete()"> Excluir </a>        
+            <?php endif ?>
                 </td>
         </tr>
         <?php endforeach ?>
