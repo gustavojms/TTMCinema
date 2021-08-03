@@ -30,9 +30,6 @@
             </ul>
         </nav>
     </header>
-<div class="home">
-<a href="/usuario/logout.php">Sair</a>
-</div>
     <section class="images">
         <div class="circle"></div>
     </section>
