@@ -4,7 +4,7 @@
 
     $id = $_GET['id'];
 
-    $result = $pdo -> prepare("DELETE FROM obra WHERE codigo = ? AND cod_user = ?");
+    $result = $pdo -> prepare("DELETE FROM obra WHERE id_obra = ? AND id_usuario = ?");
     $result -> execute([$id, $_SESSION['userId']]);
 
     header("Location: catalogo.php");
