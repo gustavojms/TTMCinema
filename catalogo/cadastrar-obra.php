@@ -74,6 +74,33 @@
         </select>
     </label>
 
+    <label for="nacionalidade">
+        <span>Nacionalidade</span>
+        <input type="text" name="nacionalidade" id="nacionalidade">
+    </label>
+
+    <label for="audio">
+        <span>Audio</span>
+        <select name="audio" id="audio">
+            <option value="escolha">Escolha o audio</option>
+            <option value="br">pt-BR</option>
+            <option value="usa">en-US</option>
+            <option value="fr">fr</option>
+            <option value="es">es</option>
+        </select>
+    </label>
+
+    <label for="legenda">
+        <span>Legendas</span>
+        <select name="legenda" id="legenda">
+            <option value="choice">Escolha a legenda</option>
+            <option value="br">pt-BR</option>
+            <option value="usa">en-US</option>
+            <option value="fr">fr</option>
+            <option value="es">es</option>
+        </select>
+    </label>
+
     <input type="submit" value="Cadastrar"></button>
     <a href="catalogo.php">Ver catalogo</a>
 </form>
