@@ -5,7 +5,7 @@
     $id = $_GET['id_obra'];
     $result = $pdo -> query("SELECT * FROM obra WHERE id_obra = '$id'");
     $data = $result -> fetchAll();
-    $stmt = $pdo -> query("SELECT comentario FROM comentario WHERE id_obra_cmt = '$id'");
+    $stmt = $pdo -> query("SELECT * FROM comentario WHERE id_obra_cmt = '$id'");
     $dado = $stmt -> fetchAll();
 ?>
 
@@ -52,7 +52,7 @@
             <th>Ano de lançamento</th>
             <th>Classificação Etária</th>
             <th>Nacionalidade</th>
-            <th>Legenda</th>
+            <th>Audio</th>
         </tr>
         <tr class="list">
             <?php foreach($data as $row): ?>
@@ -60,7 +60,7 @@
                 <td><?= $row[2] ?></td>
                 <td><?= $row[3] ?></td>
                 <td><?= $row[5] ?></td>    
-                <td><?= $row[7] ?></td> 
+                <td><?= $row[6] ?></td> 
         </tr>
         
         <?php endforeach ?>
@@ -84,6 +84,11 @@
         <tr>
             <?php foreach($dado as $dados): ?>
                 <td><?= $dados['comentario']?></td>
+                <td>
+            <?php if (Usuario::isLogged() && $dados['id_user_cmt'] == $_SESSION['userId']): ?>
+                    <a href="/comentarios/remove-comentario.php?id_obra=<?= $dados[0] ?>"> Excluir </a>        
+            <?php endif ?>
+                </td>
         </tr>
         <?php endforeach ?>
     </table>
