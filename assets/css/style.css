@@ -119,16 +119,10 @@ nav {
 
 .comment-box {
     top: 50%;
-    left: 50%;
+    left: 40%;
     position: absolute;
     transform: translate(-50%, -50%);
     width: 500px;
-}
-
-.comment-box h1 {
-    color: #8880FE;
-    font-size: 3rem;
-    margin-bottom: 6rem;
 }
 
 .comment-box input {
@@ -146,7 +140,7 @@ nav {
 
 .comment-box textarea {
     background: #161923;
-    width: 100%;
+    width: 200%;
     height: 150px;
     padding: 15px 20px;
     margin-top: 1rem;
@@ -159,7 +153,7 @@ nav {
 
 .comment-box button {
     cursor: pointer;
-    width: 40%;
+    width: 30%;
     padding: 10px 30px;
     margin-top: 3rem;
     border: none;
@@ -168,6 +162,7 @@ nav {
     color: white;
     font-size: 1.1rem;
     transition: all .3s ease-in-out;
+    margin-left: 40%;
 }
 
 .comment-box button:hover {
@@ -395,4 +390,10 @@ select {
     font-size: 1rem;
     border: 1px solid #040B18;
     border-radius: 8px;
+}
+
+.comentario {
+    top: 65%;
+    right: 45%;
+    position: absolute;
 }
