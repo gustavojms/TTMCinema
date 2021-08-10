@@ -1,11 +1,13 @@
 <?php
     include '../conexao/conexao.php';
 
-    $usuario = addslashes($_POST['usuario']);
     $comentario = addslashes($_POST['comentario']);
+    $sql = $pdo -> query("SELECT id_obra FROM obra");
+    $data = $sql -> fetchAll();
+    $id = $_GET['id_obra'];
 
-    $result = $pdo -> prepare("INSERT INTO avaliacao (usuario, comentario) VALUES(?, ?)");
-    $result -> execute([$usuario, $comentario]);
+    $result = $pdo -> prepare("INSERT INTO comentario (comentario, id_obra_cmt, id_user_cmt) VALUES(?, ?, ?)");
+    $result -> execute([$comentario, $id, $_SESSION['userId']]);
 
-    header("Location: comentarios.php");
+    header("Location: /catalogo/obras.php?id_obra=$id");
 ?>
