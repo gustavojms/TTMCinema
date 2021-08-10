@@ -47,15 +47,11 @@
 <main>
     <table>
         <tr>
-            <th>Nome</th>
-            <th>Ano de lancamento</th>
-            <th>Classificacao etaria</th>
+            <th>Titulo</th>
         </tr>
         <tr class="list">
             <?php foreach($data as $row): ?>
                 <td><a href="obras.php?id_obra=<?= $row['id_obra'] ?>"><?= $row[1] ?></td></a>
-                <td><?= $row[2] ?></td>
-                <td><?= $row[3] ?></td>
                 <td>
             <?php if (Usuario::isLogged() && $row['id_usuario_obra'] == $_SESSION['userId']): ?>
                     <a href="remove-obra.php?id=<?= $row[0] ?>"> Excluir </a>        

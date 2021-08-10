@@ -5,6 +5,8 @@
     $id = $_GET['id_obra'];
     $result = $pdo -> query("SELECT * FROM obra WHERE id_obra = '$id'");
     $data = $result -> fetchAll();
+    $stmt = $pdo -> query("SELECT comentario FROM comentario WHERE id_obra_cmt = '$id'");
+    $dado = $stmt -> fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -47,17 +49,42 @@
     <table>
         <tr>
             <th>Titulo</th>
+            <th>Ano de lançamento</th>
+            <th>Classificação Etária</th>
+            <th>Nacionalidade</th>
+            <th>Legenda</th>
         </tr>
         <tr class="list">
             <?php foreach($data as $row): ?>
                 <td><a href="obras.php?id_obra=<?= $row['id_obra'] ?>"> <?= $row['titulo'] ?></td></a>
-                <td>
-            <?php if (Usuario::isLogged()): ?>
-                    <a href="/comentarios/comentarios.php"> Comentar </a>        
-            <?php endif ?>
-                </td>       
+                <td><?= $row[2] ?></td>
+                <td><?= $row[3] ?></td>
+                <td><?= $row[5] ?></td>    
+                <td><?= $row[7] ?></td> 
         </tr>
         
+        <?php endforeach ?>
+    </table>
+
+    <div class="comment-box">
+
+    <form action="/comentarios/add-comment.php?id_obra=<?= $row['id_obra'] ?>" method="POST">
+        <label for="comentario">
+            <textarea name="comentario" id="comentario" style="resize: none" placeholder="Escrever um comentário..."></textarea>
+        </label>
+
+    <button type="submit">Comentar</button>
+    </form>
+    </div>
+
+    <table class="comentario">
+        <tr>
+            <th>Comentarios</th>
+        </tr>
+        <tr>
+            <?php foreach($dado as $dados): ?>
+                <td><?= $dados['comentario']?></td>
+        </tr>
         <?php endforeach ?>
     </table>
 </main>
