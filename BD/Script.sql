@@ -16,7 +16,9 @@ tipo VARCHAR(5) NOT NULL,
 nacionalidade VARCHAR(3) NOT NULL,
 audio VARCHAR(5) NOT NULL,
 legenda VARCHAR(5) NOT NULL,
-PRIMARY KEY (id_obra)
+id_usuario_obra INT NOT NULL,
+PRIMARY KEY (id_obra),
+FOREIGN KEY (id_usuario_obra) REFERENCES usuario (id_obra)
 );
 
 CREATE TABLE comentario (
