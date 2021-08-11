@@ -39,14 +39,14 @@
             <ul class="nav-list">
                 <li><a href="/index.php">Inicio</a></li>
                 <li><a href="/catalogo/catalogo.php">Catalogo</a></li>
-                <li><a href="/usuario/login.php">Entrar</a></li>
                 <li><a href="/usuario/logout.php">Sair</a></li>
+                <li><a href=""><?= ucfirst($_SESSION['userL']) ?></a></li>
             </ul>
             <?php endif ?>
         </nav>
 </header>
 <main>
-<h1>Cadastrar nova obra</h1>
+<h1 class="h1-obra">Cadastrar nova obra</h1>
 
 <form action="add-obra.php" method="POST">
     <label for="titulo">
@@ -73,7 +73,7 @@
             <option value="anime">Anime</option>
         </select>
     </label>
-
+    <div class="li-obra">
     <label for="nacionalidade">
         <span>Nacionalidade</span>
         <input type="text" name="nacionalidade" id="nacionalidade">
@@ -83,8 +83,8 @@
         <span>Audio</span>
         <select name="audio" id="audio">
             <option value="escolha">Escolha o audio</option>
-            <option value="br">pt-BR</option>
-            <option value="usa">en-US</option>
+            <option value="pt-BR">pt-BR</option>
+            <option value="en-US">en-US</option>
             <option value="fr">fr</option>
             <option value="es">es</option>
         </select>
@@ -94,15 +94,16 @@
         <span>Legendas</span>
         <select name="legenda" id="legenda">
             <option value="choice">Escolha a legenda</option>
-            <option value="br">pt-BR</option>
-            <option value="usa">en-US</option>
+            <option value="pt-BR">pt-BR</option>
+            <option value="en-US">en-US</option>
             <option value="fr">fr</option>
             <option value="es">es</option>
         </select>
     </label>
 
-    <input type="submit" value="Cadastrar"></button>
-    <a href="catalogo.php">Ver catalogo</a>
+    <input type="submit" value="Cadastrar">
+    <input type="reset" value="Cancelar">
+    </div>
 </form>
 </main>
 <section class="images">
