@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras</title>
+    <title>Obras - TTMCinema</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/img/moon.png" type="image/x-icon">
 </head>
@@ -51,6 +51,7 @@
             <th>Titulo</th>
             <th>Ano de lançamento</th>
             <th>Classificação Etária</th>
+            <th>Tipo</th>
             <th>Nacionalidade</th>
             <th>Audio</th>
             <th>Legendas</th>
@@ -60,7 +61,8 @@
                 <td><a href="obras.php?id_obra=<?= $row['id_obra'] ?>"> <?= $row['titulo'] ?></td></a>
                 <td><?= $row[2] ?></td>
                 <td><?= $row[3] ?></td>
-                <td><?= $row[5] ?></td>    
+                <td><?= ucfirst($row[4]) ?></td>
+                <td><?= strtoupper($row[5]) ?></td>    
                 <td><?= $row[6] ?></td> 
                 <td><?= $row[7] ?></td>
         </tr>
@@ -88,7 +90,7 @@
                 <td><?= $dados['comentario']?></td>
                 <td>
             <?php if (Usuario::isLogged() && $dados['id_user_cmt'] == $_SESSION['userId']): ?>
-                    <a href="/comentarios/remove-comentario.php?id_obra=<?= $dados[0] ?>"> Excluir </a>        
+                    <a href="/comentarios/remove-comentario.php?id_obra=<?= $dados['id_obra_cmt'] ?>"> Excluir </a>        
             <?php endif ?>
                 </td>
         </tr>
