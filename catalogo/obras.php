@@ -39,8 +39,8 @@
             <ul class="nav-list">
                 <li><a href="/index.php">Inicio</a></li>
                 <li><a href="/catalogo/catalogo.php">Catalogo</a></li>
-                <li><a href="/usuario/login.php">Entrar</a></li>
                 <li><a href="/usuario/logout.php">Sair</a></li>
+                <li><a href=""><?= ucfirst($_SESSION['userL']) ?></a></li>
             </ul>
             <?php endif ?>
         </nav>
@@ -53,6 +53,7 @@
             <th>Classificação Etária</th>
             <th>Nacionalidade</th>
             <th>Audio</th>
+            <th>Legendas</th>
         </tr>
         <tr class="list">
             <?php foreach($data as $row): ?>
@@ -61,6 +62,7 @@
                 <td><?= $row[3] ?></td>
                 <td><?= $row[5] ?></td>    
                 <td><?= $row[6] ?></td> 
+                <td><?= $row[7] ?></td>
         </tr>
         
         <?php endforeach ?>
