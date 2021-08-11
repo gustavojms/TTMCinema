@@ -44,8 +44,8 @@ nav {
 }
 
 .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+    letter-spacing: 4px;
+    margin-left: 40px;
 }
 
 .mobile-menu {
@@ -119,7 +119,7 @@ nav {
 
 .comment-box {
     top: 50%;
-    left: 40%;
+    left: 39%;
     position: absolute;
     transform: translate(-50%, -50%);
     width: 500px;
@@ -248,8 +248,8 @@ main form input {
 
 main form input[type="submit"] {
     cursor: pointer;
+    margin-top: 5rem;
     width: 50%;
-    margin-top: 4rem;
     border: none;
     border-radius: 32px;
     background: #6C63FF;
@@ -260,6 +260,30 @@ main form input[type="submit"] {
 
 main form input[type="submit"]:hover {
     background: #5952d4;
+}
+
+main form input[type="reset"] {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 50%;
+    border: none;
+    border-radius: 32px;
+    background: #6C63FF;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+main form input[type="reset"]:hover {
+    background: #5952d4;
+}
+
+.h1-obra {
+    position: relative;
+    margin-left: 35rem;
+    font-size: 2.3rem;
 }
 
 section.images {
