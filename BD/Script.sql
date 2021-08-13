@@ -24,6 +24,7 @@ FOREIGN KEY (id_usuario_obra) REFERENCES usuario (id_obra)
 CREATE TABLE comentario (
 id_comentario INT NOT NULL AUTO_INCREMENT,
 comentario VARCHAR(255) NOT NULL,
+dataAtual DATETIME NOT NULL,
 id_obra_cmt INT NOT NULL,
 id_user_cmt INT NOT NULL,
 PRIMARY KEY(id_comentario),
