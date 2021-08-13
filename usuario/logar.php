@@ -11,9 +11,9 @@
 
         if(Usuario::login ($usuario, $senha) === true) {
             if(isset($_SESSION['userL'])) {
-                header("Location: /home.php");
+                header("Location: /catalogo/catalogo.php");
             }
-            header("Location: /home.php");
+            header("Location: /catalogo/catalogo.php");
         } else {
             header("Location: login.php");
         }
