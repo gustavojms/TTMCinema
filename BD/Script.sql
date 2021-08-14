@@ -18,7 +18,7 @@ audio VARCHAR(5) NOT NULL,
 legenda VARCHAR(5) NOT NULL,
 id_usuario_obra INT NOT NULL,
 PRIMARY KEY (id_obra),
-FOREIGN KEY (id_usuario_obra) REFERENCES usuario (id_obra)
+FOREIGN KEY (id_usuario_obra) REFERENCES usuario (id_usuario)
 );
 
 CREATE TABLE comentario (
